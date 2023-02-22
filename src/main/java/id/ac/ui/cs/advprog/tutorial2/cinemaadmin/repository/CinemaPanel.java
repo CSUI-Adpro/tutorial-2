@@ -11,11 +11,19 @@ public class CinemaPanel {
     private List<String> commandHistory = new ArrayList<>();
 
     public void execute(String commandName) {
-        // TODO : implementasikan method berikut
+        // TODO : DONE
+        // Mendapatkan command dari HashMap lalu execute dan tambah ke history
+        Command command = commands.get(commandName);
+        command.execute();
+        commandHistory.add(commandName);
     }
 
     public void addCommand(Command command) {
-        // TODO : implementasikan method berikut
+        // TODO : DONE
+        // Mendapatkan namaCommand lalu memasangkan ke Hashmap dan melakukan execute
+        String namaCommand = command.getCommandName();
+        commands.put(namaCommand, command);
+        execute(command.getCommandName());
     }
 
     public void clearCommand() {
