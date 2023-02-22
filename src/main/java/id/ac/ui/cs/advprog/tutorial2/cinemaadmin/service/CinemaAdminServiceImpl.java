@@ -62,10 +62,10 @@ public class CinemaAdminServiceImpl implements CinemaAdminService {
         ACLowCommand acLowCommand = new ACLowCommand(ac);
         ACMediumCommand acMediumCommand = new ACMediumCommand(ac);
         ACOffCommand acOffCommand = new ACOffCommand(ac);
-        executeCommand(acHighCommand.getCommandName());
-        executeCommand(acLowCommand.getCommandName());
-        executeCommand(acMediumCommand.getCommandName());
-        executeCommand(acOffCommand.getCommandName());
+        cinemaPanel.addCommand(acHighCommand);
+        cinemaPanel.addCommand(acLowCommand);
+        cinemaPanel.addCommand(acMediumCommand);
+        cinemaPanel.addCommand(acOffCommand);
     }
 
     public void registryLampCommand(Lamp lamp) {
@@ -73,8 +73,8 @@ public class CinemaAdminServiceImpl implements CinemaAdminService {
         // Implement register for Lamp Command
         LampOffCommand lampOffCommand = new LampOffCommand(lamp);
         LampOnCommand lampOnCommand = new LampOnCommand(lamp);
-        executeCommand(lampOffCommand.getCommandName());
-        executeCommand(lampOnCommand.getCommandName());
+        cinemaPanel.addCommand(lampOffCommand);
+        cinemaPanel.addCommand(lampOnCommand);
     }
 
     public void registryScreenCommand(Screen screen) {
@@ -83,14 +83,15 @@ public class CinemaAdminServiceImpl implements CinemaAdminService {
         ScreenAdsCommand screenAdsCommand = new ScreenAdsCommand(screen);
         ScreenFilmCommand screenFilmCommand = new ScreenFilmCommand(screen);
         ScreenOffCommand screenOffCommand = new ScreenOffCommand(screen);
-        executeCommand(screenAdsCommand.getCommandName());
-        executeCommand(screenFilmCommand.getCommandName());
-        executeCommand(screenOffCommand.getCommandName());
+        cinemaPanel.addCommand(screenAdsCommand);
+        cinemaPanel.addCommand(screenFilmCommand);
+        cinemaPanel.addCommand(screenOffCommand);
     }
 
     @Override
     public void executeCommand(String command) {
-        // TODO : eksekusi command diatas
+        // TODO : DONE
+        // Digunakan untuk mengeksekusi command
         cinemaPanel.execute(command);
 
     }
