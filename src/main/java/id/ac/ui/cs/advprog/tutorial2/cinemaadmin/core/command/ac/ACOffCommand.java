@@ -16,8 +16,9 @@ public class ACOffCommand implements Command {
 
     @Override
     public String execute() {
-        // TODO: implementasikan method berikut
-        return null;
+        // TODO: DONE
+        // Implementasi execute pada command AC off
+        return this.ac.off();
     }
 
     @Override

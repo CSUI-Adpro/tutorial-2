@@ -16,8 +16,9 @@ public class ScreenAdsCommand implements Command {
 
     @Override
     public String execute() {
-        // TODO: implementasikan method berikut
-        return null;
+        // TODO: DONE
+        // Implement screen ads command
+        return this.screen.ads();
     }
 
     @Override
