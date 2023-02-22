@@ -56,15 +56,27 @@ public class CinemaAdminServiceImpl implements CinemaAdminService {
     }
 
     public void registryACCommand(AC ac) {
-        // TODO : implementasikan method berikut
+        // TODO : DONE
+        // Implement register for AC Command
+        ACHighCommand acHighCommand = new ACHighCommand(ac);
+        ACLowCommand acLowCommand = new ACLowCommand(ac);
+        ACMediumCommand acMediumCommand = new ACMediumCommand(ac);
+        ACOffCommand acOffCommand = new ACOffCommand(ac);
     }
 
     public void registryLampCommand(Lamp lamp) {
-        // TODO : implementasikan method berikut
+        // TODO : DONE
+        // Implement register for Lamp Command
+        LampOffCommand lampOffCommand = new LampOffCommand(lamp);
+        LampOnCommand lampOnCommand = new LampOnCommand(lamp);
     }
 
     public void registryScreenCommand(Screen screen) {
-        // TODO : implementasikan method berikut
+        // TODO : DONE
+        // Implement register for Screen Command
+        ScreenAdsCommand screenAdsCommand = new ScreenAdsCommand(screen);
+        ScreenFilmCommand screenFilmCommand = new ScreenFilmCommand(screen);
+        ScreenOffCommand screenOffCommand = new ScreenOffCommand(screen);
     }
 
     @Override
