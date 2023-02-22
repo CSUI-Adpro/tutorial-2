@@ -20,7 +20,7 @@ public class CinemaPanel {
 
     public void addCommand(Command command) {
         // TODO : DONE
-        // Mendapatkan namaCommand lalu memasangkan ke Hashmap dan melakukan execute
+        // Mendapatkan namaCommand lalu memasangkan ke Hashmap
         String namaCommand = command.getCommandName();
         commands.put(namaCommand, command);
     }
