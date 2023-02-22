@@ -11,7 +11,8 @@ public abstract class Cinema {
 
     public List<String> letTheShowBegin() {
         List<String> list = new ArrayList<>();
-        // TODO: Complete me
+        // TODO: DONE
+        // Menambahkan urutan operasi cinema
         list.add(turnOnAC());
         list.add(turnOnLight());
         list.add(turnOnScreen());

@@ -14,8 +14,8 @@ public class CinemaPanel {
         // TODO : DONE
         // Mendapatkan command dari HashMap lalu execute dan tambah ke history
         Command command = commands.get(commandName);
-        command.execute();
-        commandHistory.add(commandName);
+        String message = command.execute();
+        commandHistory.add(message);
     }
 
     public void addCommand(Command command) {
